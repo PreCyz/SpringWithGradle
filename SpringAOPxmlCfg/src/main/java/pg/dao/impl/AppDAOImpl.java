@@ -1,8 +1,8 @@
 package pg.dao.impl;
 
+import pg.annotation.CheckSession;
 import pg.beans.AppService;
 import pg.dao.AppDAO;
-import pg.annotation.CheckSession;
 
 /**
  * @author premik
