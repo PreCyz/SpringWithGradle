@@ -1,8 +1,5 @@
 .gradle/
-.idea/libraries/Gradle__org_aspectj_aspectjrt_1_8_9.xml
-.idea/libraries/Gradle__org_aspectj_aspectjweaver_1_8_9.xml
-.idea/modules/SpringAOPxmlCfg/
-.idea/workspace.xml
+.idea/
 */build/
 build/
 out/
