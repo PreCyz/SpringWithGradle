@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOP/SpringAOP.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOP/SpringAOP.iml" group="SpringAOP" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPJavaCfg/SpringAOPJavaCfg.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPJavaCfg/SpringAOPJavaCfg.iml" group="SpringAOPJavaCfg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPJavaCfg/SpringAOPJavaCfg_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPJavaCfg/SpringAOPJavaCfg_main.iml" group="SpringAOPJavaCfg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPJavaCfg/SpringAOPJavaCfg_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPJavaCfg/SpringAOPJavaCfg_test.iml" group="SpringAOPJavaCfg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOP/SpringAOP_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOP/SpringAOP_main.iml" group="SpringAOP" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOP/SpringAOP_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOP/SpringAOP_test.iml" group="SpringAOP" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPxmlCfg/SpringAOPxmlCfg.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPxmlCfg/SpringAOPxmlCfg.iml" group="SpringAOPxmlCfg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPxmlCfg/SpringAOPxmlCfg_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPxmlCfg/SpringAOPxmlCfg_main.iml" group="SpringAOPxmlCfg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPxmlCfg/SpringAOPxmlCfg_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPxmlCfg/SpringAOPxmlCfg_test.iml" group="SpringAOPxmlCfg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringMain/SpringMain.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringMain/SpringMain.iml" group="SpringMain" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringMain/SpringMain_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringMain/SpringMain_main.iml" group="SpringMain" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringMain/SpringMain_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringMain/SpringMain_test.iml" group="SpringMain" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringMonitor/SpringMonitor.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringMonitor/SpringMonitor.iml" group="SpringMonitor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringMonitor/SpringMonitor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringMonitor/SpringMonitor_main.iml" group="SpringMonitor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringMonitor/SpringMonitor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringMonitor/SpringMonitor_test.iml" group="SpringMonitor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringWithGradle.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringWithGradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringWithGradle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringWithGradle_main.iml" group="SpringWithGradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringWithGradle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringWithGradle_test.iml" group="SpringWithGradle" />
+    </modules>
+  </component>
+</project>

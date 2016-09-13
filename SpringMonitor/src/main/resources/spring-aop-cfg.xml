@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:c="http://www.springframework.org/schema/c"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
+
+    <bean id="checkSessionProcesor" class="pg.aspect.impl.CheckSessionProcessor" c:sessionService-ref="sessionService"/>
+
+    <aop:config>
+        <!--        <aop:pointcut id="daoPointCut" expression="execution(* springapp.dao.AppDAO.*(..)) and @annotation(checkSession)"/>-->
+        <aop:pointcut id="daoPointCut" expression="target(pg.dao.AppDAO) and @annotation(checkSession)"/>
+
+        <aop:aspect id="checkSessionAspect" ref="checkSessionProcesor" order="1">
+            <!--            <aop:before method="doAccessCheck"
+                                    pointcut="execution(* springapp.dao.*.*(..)) and @annotation(checkSession)"/>-->
+
+            <aop:before pointcut-ref="daoPointCut" method="doAccessCheck"/>
+            <aop:after pointcut-ref="daoPointCut" method="doAfterCheck"/>
+            <aop:after-returning pointcut-ref="daoPointCut" method="doAfterReturningValueCheck" returning="retVal"/>
+            <aop:after-throwing pointcut-ref="daoPointCut" method="doAfterThrowingCheck" throwing="exception"/>
+
+        </aop:aspect>
+
+    </aop:config>
+
+</beans>

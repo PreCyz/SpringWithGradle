@@ -1,2 +1,8 @@
 rootProject.name = 'SpringWithGradle'
+include 'SpringMonitor'
+include 'SpringMain'
+include 'SpringAOP'
+include 'SpringAOP'
+include 'SpringAOPJavaCfg'
+include 'SpringAOPxmlCfg'
 

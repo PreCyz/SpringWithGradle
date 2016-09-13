@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+                           http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.2.xsd">
+
+
+    <bean id="dbMonitor" class="pg.monitor.impl.DatabaseMonitor" c:systemName="MyDataBase"/>
+    <bean id="esbMonitor" class="pg.monitor.impl.EsbMonitor" c:systemName="ESB"/>
+
+    <bean id="errDspHandler" class="pg.monitor.handler.impl.ConsoleErrDisplayer"/>
+    <bean id="stdDspHandler" class="pg.monitor.handler.impl.ConsoleStdDisplayer"/>
+
+    <bean id="databaseChecker" class="pg.task.impl.MonitorTask" c:monitor-ref="dbMonitor"
+          c:handler-ref="errDspHandler"/>
+    <bean id="esbChecker" class="pg.task.impl.MonitorTask" c:monitor-ref="esbMonitor" c:handler-ref="stdDspHandler"/>
+
+    <task:scheduler id="monitorScheduler" pool-size="2"/>
+    <task:scheduled-tasks scheduler="monitorScheduler">
+        <task:scheduled ref="databaseChecker" method="execute" fixed-delay="5000" initial-delay="10000"/>
+        <task:scheduled ref="esbChecker" method="execute" fixed-delay="4000" initial-delay="2000"/>
+    </task:scheduled-tasks>
+
+</beans>
