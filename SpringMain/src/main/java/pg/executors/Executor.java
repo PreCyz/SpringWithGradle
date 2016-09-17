@@ -1,6 +1,6 @@
 package pg.executors;
 
-import pg.beans.MyBean;
+import pg.service.MyBean;
 
 /**
  * Created by Paweł Gawędzki on 2016-08-23.

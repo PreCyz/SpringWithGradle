@@ -1,6 +1,6 @@
 package pg.spring;
 
-import pg.beans.BeanInteger;
+import pg.service.BeanInteger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;

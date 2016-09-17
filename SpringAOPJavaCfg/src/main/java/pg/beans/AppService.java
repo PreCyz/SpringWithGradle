@@ -8,8 +8,8 @@ import java.util.Map;
  */
 public interface AppService {
 
-    Map<String, Object> sessionMap = new HashMap<>();
-    String SESSION_ID_KEY = "sessionId";
+    static Map<String, Object> sessionMap = new HashMap<>();
+    final static String SESSION_ID_KEY = "sessionId";
 
     default void init() {
         sessionMap.put(SESSION_ID_KEY, generateSessionId());

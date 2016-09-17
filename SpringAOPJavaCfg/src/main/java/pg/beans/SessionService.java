@@ -1,12 +1,9 @@
 package pg.beans;
 
-import org.springframework.stereotype.Service;
-
 /**
  * @author premik
  */
-@Service
-public class TestSessionService implements AppService {
+public class SessionService implements AppService {
 
     @Override
     public void addToSession(String key, Object value) {

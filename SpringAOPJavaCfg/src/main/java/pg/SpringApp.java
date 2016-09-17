@@ -1,15 +1,15 @@
 package pg;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import pg.service.AppService;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import pg.beans.AppService;
+import pg.config.ApplicationConfig;
 import pg.dao.AppDAO;
 
 public class SpringApp {
 
     public static void main(String[] args) {
-        //ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationSpringCfg.class);
-        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:\\spring-cfg.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         AppDAO dao = context.getBean(AppDAO.class);
         System.out.println(dao.addIdSession("regularLaunch"));
         System.out.println(dao.cutValue("regularCutLaunch"));

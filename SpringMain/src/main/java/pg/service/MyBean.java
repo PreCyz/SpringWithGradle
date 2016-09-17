@@ -1,4 +1,4 @@
-package pg.beans;
+package pg.service;
 
 /**
  * Created by Paweł Gawędzki on 2016-08-23.

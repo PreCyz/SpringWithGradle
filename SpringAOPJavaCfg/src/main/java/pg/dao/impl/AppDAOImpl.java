@@ -1,7 +1,7 @@
 package pg.dao.impl;
 
-import pg.annotation.CheckSession;
-import pg.service.AppService;
+import pg.annotations.CheckSession;
+import pg.beans.AppService;
 import pg.dao.AppDAO;
 
 /**
@@ -11,7 +11,7 @@ public class AppDAOImpl implements AppDAO {
 
     private AppService sessionService;
 
-    public void setSessionService(AppService sessionService) {
+    public AppDAOImpl(AppService sessionService) {
         this.sessionService = sessionService;
     }
 

@@ -2,7 +2,7 @@ package pg.aspect.impl;
 
 import pg.annotation.CheckSession;
 import pg.aspect.AopAspect;
-import pg.beans.AppService;
+import pg.service.AppService;
 import pg.exception.InvalidSessionException;
 
 /**
