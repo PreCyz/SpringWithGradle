@@ -1,8 +1,9 @@
 package pg.config;
 
 import org.springframework.context.annotation.*;
-import pg.aspects.CheckSessionProcesorAnnotation;
-import pg.aspects.PointcutAspect;
+import pg.aspects.CheckSessionProcessorAnnotation;
+import pg.aspects.DoNothingMethodHandler;
+import pg.pointcut.ApplicationPointcuts;
 import pg.beans.SessionService;
 import pg.dao.AppDAO;
 import pg.dao.impl.AppDAOImpl;
@@ -12,10 +13,14 @@ import pg.dao.impl.AppDAOImpl;
  */
 @Configuration
 @EnableAspectJAutoProxy
-@Import({CheckSessionProcesorAnnotation.class, PointcutAspect.class})
+@Import({
+        ApplicationPointcuts.class,
+        CheckSessionProcessorAnnotation.class,
+        DoNothingMethodHandler.class
+})
 public class ApplicationConfig {
 
-    @Bean(name = "sessionService", initMethod = "init")
+    @Bean(initMethod = "init")
     public SessionService sessionService() {
         return new SessionService();
     }
