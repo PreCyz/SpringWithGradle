@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="PGTest_main" target="1.8" />
+      <module name="PGTest_test" target="1.8" />
       <module name="spring-aop-java-cfg_main" target="1.5" />
       <module name="spring-aop-java-cfg_test" target="1.5" />
       <module name="SpringAOP_main" target="1.8" />

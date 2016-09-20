@@ -10,7 +10,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/SpringAOP" />
             <option value="$PROJECT_DIR$/SpringAOPJavaCfg" />
             <option value="$PROJECT_DIR$/SpringAOPxmlCfg" />
             <option value="$PROJECT_DIR$/SpringMain" />
