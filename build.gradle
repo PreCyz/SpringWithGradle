@@ -1,23 +1,55 @@
-group 'SpringWithGradle'
-version '1.0'
-
-apply plugin: 'java'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+buildscript {
+    ext {
+        depManagementVersion = "0.6.0.RELEASE"
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath ("io.spring.gradle:dependency-management-plugin:${depManagementVersion}")
+    }
 }
 
-dependencies {
-    compile 'org.springframework:spring-core:4.3.2.RELEASE'
-    compile 'org.springframework:spring-beans:4.3.2.RELEASE'
-    compile 'org.springframework:spring-context:4.3.2.RELEASE'
-    compile 'org.springframework:spring-aop:4.3.2.RELEASE'
-    compile 'org.springframework:spring-context-support:4.3.2.RELEASE'
-    compile 'org.aspectj:aspectjweaver:1.8.9'
-    compile 'org.aspectj:aspectjrt:1.8.9'
-    compile 'commons-logging:commons-logging:1.2'
+allprojects {
+    group 'pg'
+    version '1.0-SNAPSHOT'
+}
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+subprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    ext {
+        COMMONS_LOGGING_VERSION = "1.2"
+        JUNIT_VERSION = "4.11"
+        SPRING_VERSION = "4.3.2.RELEASE"
+        MOCKITO_VERSION = "1.10.19"
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom 'io.spring.platform:platform-bom:1.1.2.RELEASE'
+        }
+    }
+
+    dependencies {
+        compile "commons-logging:commons-logging:${COMMONS_LOGGING_VERSION}"
+        compile "org.springframework:spring-core:${SPRING_VERSION}"
+        compile "org.springframework:spring-beans:${SPRING_VERSION}"
+        compile "org.springframework:spring-context:${SPRING_VERSION}"
+        compile "org.springframework:spring-context-support:${SPRING_VERSION}"
+
+        testCompile "junit:junit:${JUNIT_VERSION}"
+        testCompile "org.mockito:mockito-all:${MOCKITO_VERSION}"
+    }
 }
